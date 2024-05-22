@@ -1,6 +1,9 @@
 namespace CalculatorTest;
 using Logic;
 
+/// <summary>
+/// Tämä luokka testaa Calculator-luokan Adder-metodia.
+/// </summary>
 [TestClass]
 public class Calculator_Adder
 {

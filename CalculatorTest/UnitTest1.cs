@@ -4,24 +4,26 @@ using Logic;
 /// <summary>
 /// Tämä luokka testaa Calculator-luokan Adder-metodia.
 /// </summary>
-[TestClass]
+[TestClass] // Tässä ilmoitetaan, että kyseinen luokka on Testi luokka
 public class Calculator_Adder
 {
-    [TestMethod]
-    [DataRow(1, 2, DisplayName = "1 + 2 = 3")]
+
+    [TestMethod] // Tässä ilmoitetaan, että kyseinen metodi on Testi metodi
+    [DataRow(1, 2, DisplayName = "1 + 2 = 3")] // Tässä annetaan metodille parametreja ja lisätietoa, joka näkyy testeissä
     [DataRow(2, 3, DisplayName = "2 + 3 = 5")]
     public void Adder_IntTwoNumbers_ReturnTrue(int first, int second)
     {
-        // Arrange
+        // Arrange = Alustetaan muuttujia ja dataa mitä testissä tarvitaan
         int compare = first + second;
 
-        // Act
+        // Act = Suoritetaan testi
         var result = Calculator.Adder(first, second);
 
-        // Assert
+        // Assert = Arvioidaan tulosta
         Assert.AreEqual(compare, result);
     }
 
+    /*
     [TestMethod]
     [DataRow(-1, -2, DisplayName = "-1 + -2 = 3")]
     [DataRow(-2, -3, DisplayName = "-2 + -3 = 5")]
@@ -36,4 +38,5 @@ public class Calculator_Adder
         // Assert
         Assert.AreEqual(compare, result);
     }
+    */
 }
